@@ -12,7 +12,6 @@ main {
 
 #togetherTextSection {
   margin: 0 23% 0 23%;
-  /* padding-top: calc(9rem + 0.5vw); */
   max-height: fit-content;
   display: flex;
   flex-direction: column;
@@ -25,8 +24,6 @@ main {
   text-align: left;
   word-break: break-word;
   font-size: 4rem;
-  /*   font-size: 4vw; */
-  /* font-size: calc(4rem + 0.5vw); */
   font-weight: 900;
   letter-spacing: 0.05px;
   line-height: 1;
@@ -173,5 +170,3 @@ a {
   }
 }
 
-/* @media only screen and (min-width: 1500px) {
-} */
