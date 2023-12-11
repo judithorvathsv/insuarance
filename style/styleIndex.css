@@ -1,0 +1,174 @@
+main {
+  display: flex;
+  height: 100vh;
+}
+
+#togetherArticle {
+  background-color: var(--blue-color);
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+#togetherTextSection {
+  margin: 0 23% 0 23%;
+  /* padding-top: calc(9rem + 0.5vw); */
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+#togetherTextSection > h2 {
+  text-align: left;
+  word-break: break-word;
+  font-size: 4rem;
+  /*   font-size: 4vw; */
+  /* font-size: calc(4rem + 0.5vw); */
+  font-weight: 900;
+  letter-spacing: 0.05px;
+  line-height: 1;
+  margin: 0rem 0 1rem 0;
+  padding-top: calc(3rem + 4vw);
+}
+
+#togetherTextSection > p {
+  text-align: left;
+  font-size: 1.7rem;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+#whiteSpan {
+  color: white;
+}
+
+#buttonSection {
+  display: flex;
+  height: 50%;
+}
+
+button {
+  z-index: 2;
+  background-color: white;
+  border-radius: 25px;
+  border: 1px solid white;
+  margin: 10% 0 0 25%;
+  width: 8rem;
+  height: 2.7rem;
+  overflow: visible;
+
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: red;
+}
+
+img {
+  z-index: 1;
+  max-width: 60%;
+  vertical-align: bottom;
+  float: right;
+  margin-right: 1rem;
+  margin-left: -5%;
+  background-color: yellowgreen;
+}
+
+#linkArticle {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+#learnSection {
+  background-color: var(--darkYellow-color);
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#joinSection {
+  background-color: var(--yellow-color);
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.container > p {
+  padding: 0;
+  margin: 0;
+}
+
+/*-----------------------*/
+
+@media only screen and (max-width: 851px) {
+  main {
+    flex-direction: column;
+  }
+
+  #togetherTextSection {
+    height: max-content;
+    padding: 10px;
+    margin: 0;
+  }
+
+  #buttonSection {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(100vw + 3rem);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #buttonSection > button {
+    margin-left: 10px;
+    width: 8rem;
+    height: 2.7rem;
+    flex-wrap: nowrap;
+  }
+
+  img {
+    margin-top: 1rem;
+    margin-left: 0%;
+    align-self: center;
+    position: absolute;
+    bottom: 0;
+    min-width: 50vw;
+    max-width: 90vw;
+  }
+
+  #linkArticle {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  html,
+  main,
+  #togetherArticle {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* @media only screen and (min-width: 1500px) {
+} */

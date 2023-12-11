@@ -1,0 +1,19 @@
+:root {
+  --darkYellow-color: #f17949;
+  --yellow-color: #fab131;
+  --lightGrey-color: #c7ddea;
+  --grey-color: #a9a19e;
+  --blue-color: rgb(199, 221, 237);
+}
+
+html {
+  padding: 0 1rem;
+}
+
+h1 {
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+p {
+  font-family: "Frank Ruhl Libre", serif;
+}
