@@ -1,6 +1,6 @@
 main {
   display: flex;
-  height: 100vh;
+  min-height: 100%;
 }
 
 #togetherArticle {
@@ -36,7 +36,7 @@ main {
 
 #togetherTextSection > p {
   text-align: left;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -60,10 +60,8 @@ button {
   width: 8rem;
   height: 2.7rem;
   overflow: visible;
-
   font-size: 0.7rem;
   font-weight: bold;
-  background-color: red;
 }
 
 img {
@@ -73,18 +71,18 @@ img {
   float: right;
   margin-right: 1rem;
   margin-left: -5%;
-  background-color: yellowgreen;
 }
 
 #linkArticle {
   display: flex;
   flex-direction: column;
   width: 50vw;
+  min-height: 100%;
 }
 
 #learnSection {
   background-color: var(--darkYellow-color);
-  height: 50vh;
+  min-height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,7 +90,7 @@ img {
 
 #joinSection {
   background-color: var(--yellow-color);
-  height: 50vh;
+  min-height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,6 +165,11 @@ a {
     padding: 0;
     margin: 0;
     width: 100%;
+  }
+
+  #learnSection,
+  #joinSection {
+    min-height: 50vw;
   }
 }
 
