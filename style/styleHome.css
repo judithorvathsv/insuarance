@@ -5,6 +5,7 @@ header {
   top: 0;
   width: 100%;
   background-color: white;
+  z-index: 4;
 }
 
 nav {
@@ -30,11 +31,11 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
+  position: relative;
 }
 
 #safetyArticle {
   height: max-content;
-  /* max-height: calc(100vh + 12rem); */
   padding: 0 7% 0 7%;
   background-color: var(--grey-color);
   width: 86%;
@@ -67,6 +68,8 @@ main {
   font-size: 1.6rem;
   line-height: 1.6;
 }
+
+/* -------- Card section -------- */
 
 #cardSection {
   display: flex;
@@ -133,7 +136,8 @@ img {
   text-align: center;
 }
 
-#aboutUs {
+/* -------- About us -------- */
+#aboutUsSection {
   z-index: 1;
   background-color: var(--yellow-color);
   height: 100vh;
@@ -146,17 +150,155 @@ img {
   padding: 3rem 30% 3rem 30%;
 }
 
-#aboutUs > h2 {
+#aboutUsSection > h2 {
   position: relative;
   top: 5rem;
   padding: 0rem 0 3rem 0;
 }
 
-#aboutUs > p {
+#aboutUsSection > p {
   font-size: 1.2rem;
   line-height: 1.6;
   position: relative;
   top: 5rem;
+}
+
+/* -------- How works section -------- */
+
+#howWorks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.smallBoxInContainer {
+  float: left;
+  width: 33.33%;
+  height: 33.33vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+#cell0 {
+  background-color: var(--blue-color);
+}
+#cell1,
+#cell3,
+#cell5 {
+  background-color: white;
+}
+#cell2 {
+  background-color: var(--lightGrey-color);
+}
+#cell4 {
+  background-color: var(--darkYellow-color);
+}
+
+.smallBoxInContainer > p:first-of-type {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--grey-color);
+  padding: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#cell0 {
+  font-size: 3rem;
+}
+
+#cell4 > p:first-of-type {
+  color: rgb(145, 73, 44);
+}
+
+#cell2 > div {
+  text-align: center;
+}
+
+.smallBoxInContainer > p:nth-of-type(2) {
+  text-align: center;
+}
+
+/* -------- Take me up button -------- */
+
+#takeMeUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 4.5rem;
+  width: 100%;
+  background-color: var(--grey-color);
+}
+
+#upButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+}
+
+/* ----------------- Footer ----------------- */
+footer {
+  color: white;
+  background-color: rgb(119, 117, 116);
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  height: 15rem;
+}
+
+#footerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  padding: 2.5rem 8% 1rem 5%;
+}
+
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.footerItem > h2 {
+  font-size: 1.5rem;
+}
+
+#socialMediaItems {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+
+.footerItem > span {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgb(230, 230, 230);
+}
+
+#socialMediaItems > img {
+  width: 2rem;
+  height: fit-content;
 }
 
 * {
@@ -164,7 +306,7 @@ img {
   margin: 0;
 }
 
-/*-----------mobile --------------*/
+/*----------- MOBILE --------------*/
 @media only screen and (max-width: 851px) {
   #safetyArticle {
     height: fit-content;
@@ -205,16 +347,109 @@ img {
     width: 80%;
   }
 
-  #aboutUs {
+  #aboutUsSection {
     z-index: 1;
     background-color: var(--yellow-color);
-    min-height: fit-content;
+    height: auto;
+    text-align: center;
+    padding: 1rem 10% 10rem 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  #aboutUsSection > h2 {
+    padding: 0 0 1rem 0;
+  }
+
+  #aboutUsSection > p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+
+  .boxContainer {
+    height: auto;
+  }
+
+  .smallBoxInContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    min-width: min-content;
+    width: 100%;
+    min-height: 33.33vw;
+    height: auto;
+  }
+
+  .smallBoxInContainer > p:first-of-type {
+    font-size: 1.7rem;
+    color: var(--grey-color);
+    width: 20%;
+    margin-right: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .smallBoxInContainer > p:nth-of-type(2),
+  #cell2 > div {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1;
+    word-break: break-word;
+    width: 50%;
+    margin-right: 10px;
+    position: relative;
+  }
+
+  footer {
+    color: white;
+    background-color: rgb(119, 117, 116);
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    min-height: 15rem;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  #footerContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-start;
+  }
+
+  .footerItem {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    padding: 3rem 10% 3rem 10%;
+    height: fit-content;
+    padding: 1rem;
+  }
+
+  .footerItem > h2 {
+    font-size: 1.5rem;
+  }
+
+  #socialMediaItems {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 1rem;
+  }
+
+  .footerItem > span {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgb(230, 230, 230);
+  }
+
+  #socialMediaItems > img {
+    width: 2rem;
+    height: fit-content;
   }
 }
