@@ -1,3 +1,5 @@
+/*----------- hello section --------------*/
+
 #helloSection {
   display: flex;
   flex-direction: column;
@@ -18,7 +20,7 @@
   transform: translateY(-50%);
 }
 
-img {
+#helloSection > img {
   z-index: 1;
   height: 90%;
   position: absolute;
@@ -29,30 +31,35 @@ img {
 /*-----------nav --------------*/
 
 header {
-  /*   position: fixed;
-  top: 0;
+  display: flex;
+  background-color: white;
   width: 100%;
+  z-index: 100;
+  justify-content: space-around;
+}
+
+#fixedHeader {
+  display: flex;
   background-color: white;
-  z-index: 4; */
-  background-color: white;
+  width: 100%;
+  z-index: 100;
   position: fixed;
   display: none;
   top: 0;
-  width: 100%;
-  z-index: 100;
+  justify-content: space-around;
 }
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 1rem;
-  flex-wrap: wrap;
 }
 
 a {
   text-decoration: none;
   color: black;
-  min-width: 12rem;
+  min-width: 8rem;
 }
 
 #contactLink {
@@ -67,6 +74,8 @@ main {
   width: 100%;
   position: relative;
 }
+
+/*----------- on mine mind section --------------*/
 
 #onMindSection {
   background-color: var(--grey-color);
@@ -107,9 +116,25 @@ button {
   align-self: flex-end;
 }
 
+/*----------- visit section --------------*/
+
 #visitSection {
   height: 50rem;
   width: 100%;
+  position: relative;
+}
+
+#visitUs {
+  background-color: var(--yellow-color);
+  color: white;
+  width: 25rem;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: absolute;
+  top: 10%;
 }
 
 .google-map {
@@ -181,9 +206,15 @@ footer {
 /*----------- MOBILE --------------*/
 
 @media only screen and (max-width: 851px) {
-  * {
+  html,
+  body,
+  main {
     padding: 0;
     margin: 0;
+  }
+
+  html {
+    background-color: green;
   }
 
   h2 {
@@ -194,21 +225,63 @@ footer {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    height: 14rem;
   }
 
-  img {
+  #helloSection > h2 {
+    display: flex;
+    align-self: flex-start;
+    width: 50%;
+    flex-wrap: wrap;
+    margin-left: 2rem;
+  }
+
+  #helloSection > img {
     z-index: 1;
     height: 90%;
     position: absolute;
     bottom: 0;
-    right: 10%;
   }
 
   #onMindSection {
-    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
+  }
+
+  #leftSideOnMind {
+    margin: 3rem 0 0 2rem;
+    padding: 0;
+    width: fit-content;
+  }
+
+  #leftSideOnMind > h2 {
+    word-break: break-word;
+  }
+
+  #rightSideOnMind {
+    width: fit-content;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  #visitUs {
+    background-color: var(--yellow-color);
+    color: white;
+    width: 20rem;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    position: absolute;
+    top: 10%;
+    left: 5%;
   }
 
   footer {
