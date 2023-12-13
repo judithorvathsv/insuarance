@@ -21,9 +21,11 @@ a {
   min-width: 12rem;
 }
 
-#homeLink {
+#offerLink {
   font-weight: bold;
 }
+
+
 
 /*-----------main --------------*/
 
@@ -57,6 +59,11 @@ main {
 
 #leftSafety > button {
   margin-left: 0;
+}
+
+#joinLink {
+  color: black;
+  text-decoration: none;
 }
 
 #rightSafety {
